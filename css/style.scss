@@ -1,9 +1,13 @@
+/* header */
+/* general */
 $header-size: 500px;
-$main-logo-size: 240px;
-$main-logo-left: $main-logo-size / 2;
-
-$header-title-size: 34px;
-$header-card-size: $header-title-size + (40 * 2);
+/* logo */
+$main-logo-size: 240px; /* automatically centers itself*/
+$main-logo-left: $main-logo-size / 2; /* logo left value */
+/* title card */
+$header-title-size: 34px; /* title inside the bottom card */
+$header-title-padding: 40px; /* title's top & bottom paddings*/
+$header-card-size: $header-title-size + ($header-title-padding * 2); /* card-size */
 
 * { 
 	box-sizing: border-box;
@@ -66,7 +70,7 @@ header {
 
 		&>div {
 			float: left;
-			width: calc(50% - 2px);
+			width: 50%;
 			height: $header-size / 2;
 			padding: 0px 10%;
 
@@ -112,7 +116,7 @@ header {
 				color: #333;
 				font-weight: normal;
 				background-color: white;
-				padding: 40px 0px;
+				padding: $header-title-padding 0px;
 				margin: 0px;
 			}
 		}

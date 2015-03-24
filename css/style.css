@@ -1,3 +1,12 @@
+/* header */
+/* general */
+/* logo */
+/* automatically centers itself*/
+/* logo left value */
+/* title card */
+/* title inside the bottom card */
+/* title's top & bottom paddings*/
+/* card-size */
 * {
   box-sizing: border-box; }
 
@@ -41,7 +50,7 @@ header {
     margin-top: 250px; }
     header .row > div {
       float: left;
-      width: calc(50% - 2px);
+      width: 50%;
       height: 250px;
       padding: 0px 10%; }
       header .row > div.right-container {
