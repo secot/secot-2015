@@ -16,7 +16,6 @@ body {
 nav {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;
   width: 100%;
   padding: 4px 15px; }
   nav ul {
@@ -31,9 +30,9 @@ nav {
         padding: 5px 11px; }
         nav ul .right-nav li a, nav ul .right-nav li a:link, nav ul .right-nav li a:visited, nav ul .right-nav li a:active {
           text-decoration: none;
-          color: #555; }
+          color: #666; }
         nav ul .right-nav li a:hover {
-          color: #777; }
+          color: #888; }
 
 header {
   position: relative;
@@ -47,7 +46,7 @@ header {
     top: 100px; }
   header .row {
     width: 100%;
-    margin-top: 250px; }
+    margin-top: 240px; }
     header .row > div {
       float: left;
       width: 50%;
@@ -73,8 +72,8 @@ header {
       position: relative;
       width: 800px;
       margin: 0px auto;
-      box-shadow: 3px 3px 15px #666;
-      border: 1px solid #eee; }
+      box-shadow: 4px 4px 10px #666;
+      border: 1px solid #ddd; }
       header .card-wrap .card h1 {
         font-size: 34px;
         color: #333;
@@ -82,5 +81,8 @@ header {
         background-color: white;
         padding: 40px 0px;
         margin: 0px; }
+
+section.photo-section img {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
