@@ -1,49 +1,86 @@
-/* header */
-/* general */
-$header-size: 500px;
-/* logo */
-$main-logo-size: 240px; /* automatically centers itself*/
-$main-logo-left: $main-logo-size / 2; /* logo left value */
-/* title card */
-$header-title-size: 34px; /* title inside the bottom card */
-$header-title-padding: 40px; /* title's top & bottom paddings*/
-$header-card-size: $header-title-size + ($header-title-padding * 2); /* card-size */
-
-* { 
+* {
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0px;
+/* smartphones */
+@media (max-width: 768px) {
+	body {
+		font-size: 10px;
+	}
+
+	.card h1 {
+	  font-size: 1.8em !important;
+	  padding-top: 1.643em !important;
+	  padding-bottom: 1.643em !important;
+	}
+
+	.row,
+	.card-wrap {
+		padding: 0 3em !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	body {
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	body {
+		font-size: 16px;
+	}
+
+	.card h1 {
+	  font-size: 1.8em !important;
+	  padding-top: 1.643em !important;
+	  padding-bottom: 1.643em !important;
+	}
+
+	.row,
+	.card-wrap {
+		padding: 0 10em !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		font-size: 16px;
+	}
+
+	.row,
+	.card-wrap {
+		padding: 0 12em !important;
+	}
 }
 
 nav {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
-	
-	width: 100%;
-	padding: 4px 15px;
+	font-size: 0.875em;
 
-	ul {
-		margin: 0px; padding: 0px;
+	padding: 0.875em;
 
-		.right-nav {
-			float: right;
-		
-			li {
-				clear: both;
-				list-style: none;
-				display: inline-block;
-				padding: 5px 11px;
+	.right-nav {
+		margin: 0px;
+		padding: 0px;
+		float: right;
 
-				a, a:link, a:visited, a:active {
-					text-decoration: none;
-					color: #666;
-				}
+		li {
+			clear: both;
+			list-style: none;
+			display: inline-block;
+			padding-left: 0.875em;
 
-				a:hover {
-					color: #888;
-				}
+			a, a:link, a:visited, a:active {
+				text-decoration: none;
+				color: #666;
+			}
+
+			a:hover {
+				color: #888;
 			}
 		}
 	}
@@ -52,26 +89,26 @@ nav {
 header {
 	position: relative;
 	background-color: #ECF0F0;
-	height: $header-size;
-
+	height: 31.250em;
 	font-family: 'Raleway', sans-serif;
 
 	img {
-		width: $main-logo-size;
+		width: 12.5em;
 		position: absolute;
-		left: calc(50% - #{$main-logo-left});
-		top: 100px;
+		top: 6.75em;
+		left: 50%;
+	  margin-left: -6.75em;
 	}
 
 	.row {
 		width: 100%;
-		margin-top: $header-size / 2 - 10px;
+		box-sizing: border-box;
+		padding: 0 6em;
+		margin-top: 15em;
 
 		&>div {
 			float: left;
 			width: 50%;
-			height: $header-size / 2;
-			padding: 0px 10%;
 
 			&.right-container{
 				text-align: right;
@@ -79,51 +116,53 @@ header {
 
 			h2 {
 				color: #C3585B;
-				font-size: 34px;
-				font-weight: normal;
+				font-size: 1.813em;
+				font-weight: 300;
 				margin: 10px;
 			}
 
-			p{
+			p {
 				color: #777;
-				font-size: 20px;
+				font-size: 1.188em;
 				margin: 10px;
 			}
-		
-
 		}
-
-
 	}
 
-	.card-wrap{
-		position: absolute;
-		bottom: 0 - ($header-card-size / 2);
+	.card-wrap {
 		width: 100%;
+		position: absolute;
+		bottom: -3.75em;
 		text-align: center;
+		box-sizing: border-box;
+		padding: 0 6em;
 
 		.card {
 			position: relative;
-			width: 800px;
-			margin: 0px auto;
-			
+			width: 100%;
+
 			box-shadow: 4px 4px 10px #666;
 			border: 1px solid #ddd;
-		
+
 			h1 {
-				font-size: $header-title-size;
 				color: #333;
-				font-weight: normal;
+				font-size: 2.250em;
+				font-weight: 300;
+				font-style: italic;
 				background-color: white;
-				padding: $header-title-padding 0px;
+				padding: 1.167em 0.5em;
 				margin: 0px;
 			}
 		}
 	}
 }
 
-section.photo-section {
+.left-container,
+.right-container {
+	font-weight: 300;
+}
 
+section.photo-section {
 	img {
 		width: 100%;
 	}
