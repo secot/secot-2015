@@ -78,14 +78,14 @@ header {
   header img {
     width: 12.5em;
     position: absolute;
-    top: 6.75em;
+    top: 5em;
     left: 50%;
     margin-left: -6.75em; }
   header .row {
     width: 100%;
     box-sizing: border-box;
     padding: 0 6em;
-    margin-top: 15em; }
+    margin-top: 17em; }
     header .row > div {
       box-sizing: border-box;
       display: inline-block;
