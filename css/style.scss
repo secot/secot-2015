@@ -7,7 +7,19 @@
 /* smartphones */
 @media (max-width: 768px) {
 	body {
-		font-size: 10px;
+		font-size: 8px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	header img {
+		top: 4em !important;
+	}
+
+	.row {
+		margin-top: 18em !important;
 	}
 
 	.card h1 {
@@ -92,6 +104,10 @@ header {
 	height: 31.250em;
 	font-family: 'Raleway', sans-serif;
 
+	/* margin-top fix */
+	padding-top: 1px;
+  margin-top: -1px;
+
 	img {
 		width: 12.5em;
 		position: absolute;
@@ -107,7 +123,8 @@ header {
 		margin-top: 15em;
 
 		&>div {
-			float: left;
+			box-sizing: border-box;
+			display: inline-block;
 			width: 50%;
 
 			&.right-container{
@@ -118,13 +135,13 @@ header {
 				color: #C3585B;
 				font-size: 1.813em;
 				font-weight: 300;
-				margin: 10px;
+				margin: 0.345em 0;
 			}
 
 			p {
 				color: #777;
 				font-size: 1.188em;
-				margin: 10px;
+				margin: 0.345em 0;
 			}
 		}
 	}
