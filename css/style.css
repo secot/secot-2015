@@ -1,10 +1,12 @@
+/* Usage: @include border-radius(10px); */
+/* Media Queries */
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box; }
 
 /* smartphones */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   body {
     font-size: 8px; }
 
@@ -143,7 +145,63 @@ section.clean {
   section.clean h2 {
     font-weight: 400;
     font-size: 2em; }
+  section.clean h3 {
+    font-weight: 400;
+    margin: .5em; }
 
-/*guests session*/
+/*guests section*/
+/*schedule section*/
+section#schedule {
+  background-color: #F9F8EC; }
+  section#schedule div.card {
+    background-color: white;
+    width: 80%;
+    margin: 2em auto;
+    border: 1px solid #eee;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 4px #aaa; }
+    section#schedule div.card .card-content {
+      padding: 2em 2.5em; }
+      section#schedule div.card .card-content h4 {
+        font-weight: 400;
+        font-size: 1.4em; }
+      section#schedule div.card .card-content:first-child {
+        border-bottom: 1px solid #eee; }
+      section#schedule div.card .card-content .icon {
+        width: 40px;
+        float: left; }
+        section#schedule div.card .card-content .icon i {
+          font-size: 1.3em; }
+      section#schedule div.card .card-content .events-wrap {
+        float: left;
+        width: calc(100% - 40px); }
+        section#schedule div.card .card-content .events-wrap .event-line > * {
+          float: left; }
+        section#schedule div.card .card-content .events-wrap .event-line .time {
+          width: 9em; }
+          section#schedule div.card .card-content .events-wrap .event-line .time p {
+            text-align: right;
+            letter-spacing: -0.01em;
+            color: #888; }
+        section#schedule div.card .card-content .events-wrap .event-line .description {
+          padding-left: 1.3em;
+          width: calc(100% - 10.3em);
+          font-weight: 300; }
+          section#schedule div.card .card-content .events-wrap .event-line .description .title {
+            letter-spacing: 0.01em; }
+          section#schedule div.card .card-content .events-wrap .event-line .description .hidden {
+            display: none; }
+          section#schedule div.card .card-content .events-wrap .event-line .description .guest {
+            margin: .4em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            font-size: .8em;
+            font-weight: 400;
+            color: #888; }
+        section#schedule div.card .card-content .events-wrap .event-line:not(:first-child) {
+          margin-top: 1.2em; }
 
 /*# sourceMappingURL=style.css.map */

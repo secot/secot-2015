@@ -1,3 +1,18 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+/* Usage: @include border-radius(10px); */
+
+/* Media Queries */
+$small: "(max-width: 450px)";
+$medium: "(max-width: 768px)";
+$large: "(min-width: 768px) and (max-width: 992px)";
+$xlarge: "(min-width: 992px) and (max-width: 1200px)";
+$xxlarge: "(min-width: 1200px)";
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -5,7 +20,7 @@
 }
 
 /* smartphones */
-@media (max-width: 768px) {
+@media #{$small} {
 	body {
 		font-size: 8px;
 	}
@@ -34,13 +49,13 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media #{$large} {
 	body {
 		font-size: 12px;
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media #{$xlarge} {
 	body {
 		font-size: 16px;
 	}
@@ -57,7 +72,7 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@media #{$xxlarge} {
 	body {
 		font-size: 16px;
 	}
@@ -205,5 +220,96 @@ section.clean {
 		font-weight: 400;
 		font-size: 2em;
 	}
+
+	h3 {
+		font-weight: 400;
+		margin: .5em;
+	}
 }
-/*guests session*/
+
+/*guests section*/
+section#guests{
+
+}
+
+/*schedule section*/
+section#schedule {
+	background-color: #F9F8EC;
+
+	div.card{
+		background-color: white;
+		width: 80%;
+		margin: 2em auto;
+		border: 1px solid #eee;
+		@include border-radius(4px);
+		box-shadow: 0px 3px 4px #aaa;
+
+		.card-content {
+			padding: 2em 2.5em;
+
+			h4 {
+				font-weight: 400;
+				font-size: 1.4em; 
+			}
+
+			&:first-child {
+				border-bottom: 1px solid #eee;
+			}
+
+			// event & time list
+			.icon {
+				width: 40px;
+				float: left;
+				i {
+					font-size: 1.3em;
+				}
+			}
+
+			.events-wrap {
+				float: left;
+				width: calc(100% - 40px);
+
+				.event-line{
+					&>*{
+						float: left;
+					}
+					.time {
+						width: 9em;
+						p {
+							text-align: right;
+							letter-spacing: -0.01em;
+							color: #888;
+						}
+					}
+					.description {
+						padding-left: 1.3em;
+						width: calc(100% - 10.3em); // 10 = 9 from .time + 1.3 from padding
+						font-weight: 300;
+
+						.title {
+							letter-spacing: 0.01em;
+						}
+
+						.hidden{
+							display: none;
+						}
+
+						.guest {
+							margin: .4em 0;
+							// font-weight: bold;
+							text-transform: uppercase;
+							letter-spacing: 0.01em;
+							font-size: .8em;
+							font-weight: 400;
+							color: #888;
+						}
+					}
+
+					&:not(:first-child){
+						margin-top: 1.2em;
+					}
+				}
+			}
+		}
+	}
+}
