@@ -68,8 +68,15 @@
 	}
 }
 
-nav {
+/* End media queries*/
+
+body {
 	font-family: 'Raleway', sans-serif;
+}
+
+/* Start nav + session 1 (header)*/
+
+nav {
 	font-weight: 700;
 	font-size: 0.875em;
 
@@ -102,7 +109,6 @@ header {
 	position: relative;
 	background-color: #ECF0F0;
 	height: 31.250em;
-	font-family: 'Raleway', sans-serif;
 
 	/* margin-top fix */
 	padding-top: 1px;
@@ -179,8 +185,25 @@ header {
 	font-weight: 300;
 }
 
+/* First session end */
+
+/* Photo section*/
 section.photo-section {
 	img {
 		width: 100%;
 	}
 }
+
+/*section preset*/
+section.clean {
+	background-color: white;
+	padding: 4em 4em 2em 4em;
+	margin: 0 auto;
+	color: #555;
+
+	h2 {
+		font-weight: 400;
+		font-size: 2em;
+	}
+}
+/*guests session*/
