@@ -5,13 +5,26 @@
           border-radius: $radius;
 }
 /* Usage: @include border-radius(10px); */
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+/* Usage: @include box-shadow(3px, 3px, 10px, #555); */
 
 /* Media Queries */
-$small: "(max-width: 450px)";
-$medium: "(max-width: 768px)";
-$large: "(min-width: 768px) and (max-width: 992px)";
-$xlarge: "(min-width: 992px) and (max-width: 1200px)";
-$xxlarge: "(min-width: 1200px)";
+$smartphone: "(max-width: 487px)";
+$tablet: 		 "(min-width: 488px) and (max-width: 768px)";
+$desktop-s:  "(min-width: 769px) and (max-width: 992px)";
+$desktop-m:  "(min-width: 993px) and (max-width: 1200px)";
+$desktop-l:  "(min-width: 1201px)";
+
 
 * {
 	margin: 0px;
@@ -19,69 +32,70 @@ $xxlarge: "(min-width: 1200px)";
 	box-sizing: border-box;
 }
 
-/* smartphones */
-@media #{$small} {
-	body {
-		font-size: 8px;
-	}
 
-	nav {
-		display: none;
-	}
+// /* smartphones */
+// @media #{$xsmall} {
+// 	body {
+// 		font-size: 8px;
+// 	}
 
-	header img {
-		top: 4em !important;
-	}
+// 	nav {
+// 		display: none;
+// 	}
 
-	.row {
-		margin-top: 18em !important;
-	}
+// 	header img {
+// 		top: 4em !important;
+// 	}
 
-	.card h1 {
-	  font-size: 1.8em !important;
-	  padding-top: 1.643em !important;
-	  padding-bottom: 1.643em !important;
-	}
+// 	.row {
+// 		margin-top: 18em !important;
+// 	}
 
-	.row,
-	.card-wrap {
-		padding: 0 3em !important;
-	}
-}
+// 	.card h1 {
+// 	  font-size: 1.8em !important;
+// 	  padding-top: 1.643em !important;
+// 	  padding-bottom: 1.643em !important;
+// 	}
 
-@media #{$large} {
-	body {
-		font-size: 12px;
-	}
-}
+// 	.row,
+// 	.card-wrap {
+// 		padding: 0 3em !important;
+// 	}
+// }
 
-@media #{$xlarge} {
-	body {
-		font-size: 16px;
-	}
+// @media #{$medium} {
+// 	body {
+// 		font-size: 12px;
+// 	}
+// }
 
-	.card h1 {
-	  font-size: 1.8em !important;
-	  padding-top: 1.643em !important;
-	  padding-bottom: 1.643em !important;
-	}
+// @media #{$large} {
+// 	body {
+// 		font-size: 16px;
+// 	}
 
-	.row,
-	.card-wrap {
-		padding: 0 10em !important;
-	}
-}
+// 	.card h1 {
+// 	  font-size: 1.8em !important;
+// 	  padding-top: 1.643em !important;
+// 	  padding-bottom: 1.643em !important;
+// 	}
 
-@media #{$xxlarge} {
-	body {
-		font-size: 16px;
-	}
+// 	.row,
+// 	.card-wrap {
+// 		padding: 0 10em !important;
+// 	}
+// }
 
-	.row,
-	.card-wrap {
-		padding: 0 12em !important;
-	}
-}
+// @media #{$xlarge} {
+// 	body {
+// 		font-size: 16px;
+// 	}
+
+// 	.row,
+// 	.card-wrap {
+// 		padding: 0 12em !important;
+// 	}
+// }
 
 /* End media queries*/
 
@@ -90,7 +104,6 @@ body {
 }
 
 /* Start nav + session 1 (header)*/
-
 nav {
 	font-weight: 700;
 	font-size: 0.875em;
@@ -128,13 +141,15 @@ header {
 	/* margin-top fix */
 	padding-top: 1px;
   margin-top: -1px;
+	
+	
 
 	img {
 		width: 12.5em;
 		position: absolute;
 		top: 5em;
 		left: 50%;
-	  margin-left: -6.75em;
+	  margin-left: -6.25em;
 	}
 
 	.row {
@@ -142,6 +157,7 @@ header {
 		box-sizing: border-box;
 		padding: 0 6em;
 		margin-top: 17em;
+		
 
 		&>div {
 			box-sizing: border-box;
@@ -174,13 +190,15 @@ header {
 		text-align: center;
 		box-sizing: border-box;
 		padding: 0 6em;
+		
 
 		.card {
 			position: relative;
 			width: 100%;
-
-			box-shadow: 4px 4px 10px #666;
 			border: 1px solid #ddd;
+
+			@include box-shadow(4px, 4px, 10px, #666);
+			
 
 			h1 {
 				color: #333;
@@ -190,6 +208,8 @@ header {
 				background-color: white;
 				padding: 1.167em 0.5em;
 				margin: 0px;
+
+				
 			}
 		}
 	}
@@ -206,6 +226,7 @@ header {
 section.photo-section {
 	img {
 		width: 100%;
+		clear: both;
 	}
 }
 
@@ -216,15 +237,20 @@ section.clean {
 	margin: 0 auto;
 	color: #555;
 
+	
+
 	h2 {
 		font-weight: 400;
 		font-size: 2em;
+		
 	}
 
 	h3 {
 		font-weight: 400;
 		margin: .5em;
+		
 	}
+
 }
 
 /*guests section*/
@@ -234,7 +260,7 @@ section#guests{
 
 /*schedule section*/
 section#schedule {
-	background-color: #F9F8EC;
+	background-color: #ECF0F0;
 
 	div.card{
 		background-color: white;
@@ -242,10 +268,12 @@ section#schedule {
 		margin: 2em auto;
 		border: 1px solid #eee;
 		@include border-radius(4px);
-		box-shadow: 0px 3px 4px #aaa;
+		@include box-shadow(0px, 4px, 2px, #aaa);
 
+		
 		.card-content {
 			padding: 2em 2.5em;
+			
 
 			h4 {
 				font-weight: 400;
@@ -274,34 +302,35 @@ section#schedule {
 						float: left;
 					}
 					.time {
-						width: 9em;
+						width: 6.2em;
 						p {
 							text-align: right;
 							letter-spacing: -0.01em;
-							color: #888;
+							font-size: .9em;
+							// color: #888;
 						}
+						
 					}
 					.description {
 						padding-left: 1.3em;
-						width: calc(100% - 10.3em); // 10 = 9 from .time + 1.3 from padding
-						font-weight: 300;
-
+						width: calc(100% - 7.5em); // 7.5 = 6.2 from .time + 1.3 from padding
+						font-weight: 400;
+						color: #666;
 						.title {
-							letter-spacing: 0.01em;
+							// letter-spacing: 0.01em;
 						}
-
 						.hidden{
 							display: none;
+							
 						}
-
 						.guest {
 							margin: .4em 0;
 							// font-weight: bold;
 							text-transform: uppercase;
 							letter-spacing: 0.01em;
-							font-size: .8em;
-							font-weight: 400;
-							color: #888;
+							font-size: .9em;
+							font-weight: bold;
+							// color: #333;
 						}
 					}
 
@@ -312,4 +341,70 @@ section#schedule {
 			}
 		}
 	}
+}
+
+
+@media #{$tablet}, #{$smartphone}{
+	body {
+		font-size: .8em;
+	}
+	header {
+		height: auto;
+	}
+	header .card-wrap {
+		margin-top: 1em;
+		position: relative;
+		bottom: 0;
+		padding: 0;
+	}
+	header .row {
+		padding: 0 2em;
+	}
+}
+@media #{$smartphone}{
+	body {
+		font-size: .7em;
+	}
+	nav {
+		display: none;
+	}
+	header .row div {
+		display: block;
+		width: 100%;
+		text-align: center !important;
+		padding-bottom: 1em;
+	}
+	header img {
+		top: 1em;
+		z-index: 2;
+		width: 7em;
+		margin-left: -3.5em;
+	}
+	header .card-wrap {
+		margin-top: 1em;
+		position: absolute;
+		top: 5.5em;
+		padding: 0;
+		z-index: 1;
+	}
+	header .card-wrap .card h1 {
+		font-size: 1.8em;
+		padding-left: 1em;
+		padding-left: 1em;
+
+	}
+	header {
+		border-bottom: 1px solid #aaa;
+	}
+}
+@media #{$desktop-s}{
+	body {
+		font-size: .768em;
+	}
+}
+@media #{$desktop-m}{
+	
+}
+@media #{$desktop-l}{
+	
 }
