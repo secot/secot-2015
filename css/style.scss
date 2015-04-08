@@ -257,7 +257,7 @@ section.clean {
 	.section-wrap {
 		width: 90%;
 		margin: auto;
-		padding: 1em 0 1em 0;
+		padding: 5em 0 1em 0;
 	}
 
 	h2 {
@@ -276,7 +276,43 @@ section.clean {
 
 /*guests section*/
 section#guests{
+	background-color: lighten(rgb(255, 255, 237),2%);
 
+	.guests-wrap {
+		width: 70%;
+		margin: 0 auto;
+		padding-bottom: 4em;
+	}
+
+	.guest {
+		width: 100%;
+		margin-top: 2.4em;
+		
+		.img-block {
+			width: 10em;
+			height: 10em;
+			display: inline-block;
+			img {
+				@include border-radius(50%);
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.description {
+			display: inline-block;
+			width: calc(100% - 12em);
+			padding-left: 1em;
+			vertical-align: top;
+		}
+
+	}
+	.separator {
+		width: 50%;
+		margin: 0 auto;
+		border-bottom: 1px solid #ccc;
+		margin-top: 2em;
+	}
 }
 
 /*schedule section*/
