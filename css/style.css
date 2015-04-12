@@ -32,71 +32,34 @@ nav {
 header {
   position: relative;
   background-color: #ECF0F0;
-  height: 31.250em;
   /* margin-top fix */
   padding-top: 1px;
   margin-top: -1px; }
   header img {
-    width: 12.5em;
+    width: 12em;
     position: absolute;
-    top: 5em;
+    top: 2em;
     left: 50%;
-    margin-left: -6.25em; }
+    margin-left: -6em; }
   header .row {
     width: 100%;
+    height: 12em;
     box-sizing: border-box;
-    padding: 0 6em;
-    margin-top: 17em; }
-    header .row .hidden-title {
-      display: none;
-      padding: 0px;
-      margin: 0px; }
-      header .row .hidden-title h1 {
-        color: #333;
-        font-size: 1.8em;
-        font-weight: 300;
-        font-style: italic;
-        background-color: white;
-        padding: 1em;
-        margin: 0;
-        width: 100%; }
+    padding: 2em 6em; }
     header .row > div {
-      box-sizing: border-box;
       display: inline-block;
       width: 50%; }
       header .row > div.right-container {
         text-align: right; }
       header .row > div h2 {
         color: #C3585B;
-        font-size: 1.813em;
+        font-size: 1.913em;
         font-weight: 300;
         margin: 0.345em 0; }
       header .row > div p {
         color: #777;
-        font-size: 1.188em;
+        font-size: 1.288em;
         margin: 0.345em 0; }
-  header .card-wrap {
-    width: 100%;
-    position: absolute;
-    bottom: -3.75em;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0 6em; }
-    header .card-wrap .card {
-      position: relative;
-      width: 100%;
-      border: 1px solid #ddd;
-      -webkit-box-shadow: 4px 4px 10px #666;
-      -moz-box-shadow: 4px 4px 10px #666;
-      box-shadow: 4px 4px 10px #666; }
-      header .card-wrap .card h1 {
-        color: #333;
-        font-size: 2.250em;
-        font-weight: 300;
-        font-style: italic;
-        background-color: white;
-        padding: 1.167em 0.5em;
-        margin: 0px; }
 
 .left-container,
 .right-container {
@@ -120,6 +83,10 @@ section.photo-section {
     bottom: 0;
     top: 0;
     margin: auto; }
+    section.photo-section .wrapper .separator {
+      width: 100px;
+      margin: 1em auto auto auto;
+      border-bottom: 2px solid #eee; }
     section.photo-section .wrapper h1 {
       font-size: 6em;
       font-weight: 400; }
@@ -129,7 +96,7 @@ section.photo-section {
       font-weight: 300;
       font-style: italic; }
   section.photo-section .timer {
-    padding-top: 3em; }
+    padding-top: 2em; }
     section.photo-section .timer div {
       display: inline-block;
       width: 20%;
@@ -171,17 +138,25 @@ section#guests {
       height: 10em;
       display: inline-block; }
       section#guests .guest .img-block img {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-box-shadow: -2px 2px 7px #333;
+        -moz-box-shadow: -2px 2px 7px #333;
+        box-shadow: -2px 2px 7px #333;
         height: 100%;
         width: 100%; }
+    section#guests .guest h3 {
+      margin: 0;
+      padding: 1em 0; }
     section#guests .guest .description {
       display: inline-block;
       width: calc(100% - 12em);
-      padding-left: 1em;
-      vertical-align: top; }
+      padding-left: 2em;
+      vertical-align: top;
+      letter-spacing: .04em;
+      line-height: 1.4em; }
   section#guests .separator {
     width: 50%;
     margin: 0 auto;
@@ -285,19 +260,6 @@ section#schedule {
     z-index: 2;
     width: 7em;
     margin-left: -3.5em; }
-
-  header .card-wrap {
-    display: none; }
-
-  header {
-    -webkit-box-shadow: 0px 2px 12px #666;
-    -moz-box-shadow: 0px 2px 12px #666;
-    box-shadow: 0px 2px 12px #666;
-    padding-bottom: 1em; }
-
-  header .row .hidden-title {
-    display: block !important;
-    width: 100%; }
 
   section#schedule div.card {
     width: 100%; }
