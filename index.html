@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='stylesheet' type='text/css' href="./css/style.css">
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway:300,400,700'>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lobster'>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+	<script src="./js/timer.js"></script>
 </head>
 <body>
 
-	<header>
-		<img src="./img/main-logo.png" alt="logo">
+	<section class="photo-section">
 		<nav>
 			<ul class="right-nav">
 				<li><a href="#">SOBRE</a></li>
@@ -19,6 +21,38 @@
 				<li><a href="#">REGISTRE-SE</a></li>
 			</ul>
 		</nav>
+		<div class="wrapper">
+			
+      <h1>S<small>E</small>C<small>O</small>T</h1>
+      <h2>VII Semana da Computação e Tecnologia</h2>
+
+      <div class="timer" id="timer">
+        <div>
+          <span id="d"></span>
+          <div>dias</div>
+        </div>
+
+        <div>
+          <span id="h"></span>
+          <div>horas</div>
+        </div>
+
+        <div>
+          <span id="m"></span>
+          <div>minutos</div>
+        </div>
+
+        <div>
+          <span id="s"></span>
+          <div>segundos</div>
+        </div>
+      </div>
+  </div>
+	</section>
+
+	<header>
+		<img src="./img/main-logo.png" alt="logo">
+		
 		<div class="row">
 			<div class="hidden-title">
 				<h1>VII Semana da Computação e Tecnologia</h1>
@@ -40,9 +74,7 @@
 		</div>
 	</header>
 
-	<section class="photo-section">
-		<img src="./img/presentation.jpg" alt="">
-	</section>
+	
 
 	<section class="clean" id="guests">
 		<div class="section-wrap">

@@ -35,73 +35,6 @@ $desktop-m-max:  "(max-width: 1200px)";
 	box-sizing: border-box;
 }
 
-
-// /* smartphones */
-// @media #{$xsmall} {
-// 	body {
-// 		font-size: 8px;
-// 	}
-
-// 	nav {
-// 		display: none;
-// 	}
-
-// 	header img {
-// 		top: 4em !important;
-// 	}
-
-// 	.row {
-// 		margin-top: 18em !important;
-// 	}
-
-// 	.card h1 {
-// 	  font-size: 1.8em !important;
-// 	  padding-top: 1.643em !important;
-// 	  padding-bottom: 1.643em !important;
-// 	}
-
-// 	.row,
-// 	.card-wrap {
-// 		padding: 0 3em !important;
-// 	}
-// }
-
-// @media #{$medium} {
-// 	body {
-// 		font-size: 12px;
-// 	}
-// }
-
-// @media #{$large} {
-// 	body {
-// 		font-size: 16px;
-// 	}
-
-// 	.card h1 {
-// 	  font-size: 1.8em !important;
-// 	  padding-top: 1.643em !important;
-// 	  padding-bottom: 1.643em !important;
-// 	}
-
-// 	.row,
-// 	.card-wrap {
-// 		padding: 0 10em !important;
-// 	}
-// }
-
-// @media #{$xlarge} {
-// 	body {
-// 		font-size: 16px;
-// 	}
-
-// 	.row,
-// 	.card-wrap {
-// 		padding: 0 12em !important;
-// 	}
-// }
-
-/* End media queries*/
-
 body {
 	font-family: 'Raleway', sans-serif;
 }
@@ -114,8 +47,8 @@ nav {
 	padding: 0.875em;
 
 	.right-nav {
-		margin: 0px;
-		padding: 0px;
+		margin: 0;
+		padding: 0;
 		float: right;
 
 		li {
@@ -126,11 +59,11 @@ nav {
 
 			a, a:link, a:visited, a:active {
 				text-decoration: none;
-				color: #666;
+				color: white;
 			}
 
 			a:hover {
-				color: #888;
+				color: #EEE;
 			}
 		}
 	}
@@ -242,10 +175,54 @@ header {
 
 /* Photo section*/
 section.photo-section {
-	img {
-		width: 100%;
-		clear: both;
-	}
+	height: 100%;
+	background-image: url(../img/pres-bg.jpg);
+	background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  .wrapper{
+  	width: 920px;
+  	height: 50%;
+  	text-align: center;
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  top: 0;
+	  margin: auto;
+
+		h1 {
+			font-size: 6em;
+			font-weight: 400;
+		}
+
+  	h2 {
+			margin-top: .5em;
+  		font-size: 2.3em;
+  		font-weight: 300;
+  		font-style: italic;
+  	}
+  }
+
+  .timer {
+  	padding-top: 3em;
+  	div {
+  		display: inline-block;
+  		width: 20%;
+  		font-weight: 300;
+
+  		span {
+  			display: block;
+  			font-size: 5em;
+  		
+  		}
+  		div {
+  			width: 100%;
+  			font-size: 1.3em;
+  		}
+  	}
+  }
 }
 
 /*section preset*/
