@@ -142,9 +142,7 @@ section#guests {
         -moz-border-radius: 2px;
         -ms-border-radius: 2px;
         border-radius: 2px;
-        -webkit-box-shadow: -2px 2px 7px #333;
-        -moz-box-shadow: -2px 2px 7px #333;
-        box-shadow: -2px 2px 7px #333;
+        border: 1px solid #999;
         height: 100%;
         width: 100%; }
     section#guests .guest h3 {
