@@ -19,7 +19,7 @@ window.onload = function(){
 
 		for(var i = 0; i < l.length; i++){
 
-			if (l[i].innerHTML.length > 360) {
+			if (l[i].innerHTML.length > 400) {
 				n = document.createElement('span');
 				n.setAttribute("class","expand-mini-cv");
 				n.setAttribute("data-ref",i);
@@ -27,7 +27,7 @@ window.onload = function(){
 				n.setAttribute("data-text",l[i].innerHTML);
 				n.innerHTML = "ver tudo"
 
-				l[i].innerHTML = l[i].innerHTML.substring(0, 440);
+				l[i].innerHTML = l[i].innerHTML.substring(0, 400);
 				l[i].innerHTML += "... ";
 
 				n.setAttribute("onclick","guestModal(this)");

@@ -299,7 +299,8 @@ footer {
     font-size: 3em;
     color: white;
     padding-bottom: 1em;
-    text-align: center; }
+    text-align: center;
+    font-weight: normal; }
   footer .img-box {
     width: 400px;
     margin: auto; }
