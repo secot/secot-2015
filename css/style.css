@@ -32,9 +32,7 @@ nav {
 header {
   position: relative;
   background-color: #ECF0F0;
-  /* margin-top fix */
-  padding-top: 1px;
-  margin-top: -1px; }
+  z-index: 3; }
   header img {
     width: 12em;
     position: absolute;
@@ -68,6 +66,14 @@ header {
 /* First session end */
 /* Photo section*/
 section.photo-section {
+  /* margin-top fix */
+  -webkit-box-shadow: 0px 5px 7px #666;
+  -moz-box-shadow: 0px 5px 7px #666;
+  box-shadow: 0px 5px 7px #666;
+  position: relative;
+  z-index: 4;
+  padding-top: 1px;
+  margin-top: -1px;
   height: 100%;
   background-image: url(../img/pres-bg.jpg);
   background-repeat: no-repeat;
@@ -106,63 +112,76 @@ section.photo-section {
         font-size: 5em; }
       section.photo-section .timer div div {
         width: 100%;
-        font-size: 1.3em; }
+        font-size: 1.3em;
+        color: #ccc; }
 
 /*section preset*/
 section.clean {
   background-color: white;
-  color: #555; }
+  color: #555;
+  padding-bottom: 2em; }
   section.clean .section-wrap {
     width: 90%;
     margin: auto;
-    padding: 5em 0 1em 0; }
+    padding: 6em 0 1em 0; }
   section.clean h2 {
     font-weight: 400;
-    font-size: 2em; }
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-family: "Lobster", cursive;
+    text-align: center; }
   section.clean h3 {
     font-weight: 400;
     margin: .5em; }
 
 /*guests section*/
 section#guests {
-  background-color: #fffff7; }
+  background-color: #fffff7;
+  -webkit-box-shadow: 0px 5px 12px #aaa;
+  -moz-box-shadow: 0px 5px 12px #aaa;
+  box-shadow: 0px 5px 12px #aaa;
+  position: relative;
+  z-index: 2; }
   section#guests .guests-wrap {
     width: 70%;
     margin: 0 auto;
     padding-bottom: 4em; }
   section#guests .guest {
-    width: 100%;
-    margin-top: 2.4em; }
+    width: 100%; }
     section#guests .guest .img-block {
-      width: 10em;
-      height: 10em;
+      width: 11em;
+      height: 11em;
       display: inline-block; }
       section#guests .guest .img-block img {
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        -ms-border-radius: 2px;
-        border-radius: 2px;
-        border: 1px solid #999;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
         height: 100%;
         width: 100%; }
     section#guests .guest h3 {
       margin: 0;
-      padding: 1em 0; }
+      padding: 0 0 1em 0; }
     section#guests .guest .description {
       display: inline-block;
-      width: calc(100% - 12em);
+      width: calc(100% - 13em);
       padding-left: 2em;
       vertical-align: top;
       letter-spacing: .04em;
       line-height: 1.4em; }
+      section#guests .guest .description span {
+        color: #C3585B;
+        font-weight: 700; }
+        section#guests .guest .description span:hover {
+          cursor: pointer; }
   section#guests .separator {
     width: 50%;
-    margin: 0 auto;
     border-bottom: 1px solid #ccc;
-    margin-top: 2em; }
+    margin: 4em auto; }
 
 /*schedule section*/
 section#schedule {
+  display: none;
   background-color: #ECF0F0; }
   section#schedule div.card {
     background-color: white;
@@ -212,29 +231,58 @@ section#schedule {
         section#schedule div.card .card-content .events-wrap .event-line:not(:first-child) {
           margin-top: 1.2em; }
 
-/* Gambiarra */
+section.funding {
+  background-color: #fefbf7;
+  padding: 3em 0;
+  text-align: center;
+  position: relative;
+  z-index: 1; }
+  section.funding h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em; }
+  section.funding div.iframe-wrap {
+    margin: 2em 0 3em 0; }
+
 #schedule .card-content div.description div.hidden {
   display: none;
   margin-bottom: .3em; }
+
+a.btn {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 3px solid #C3585B;
+  padding: 1.2em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  font-size: .9em;
+  transition: all .3s;
+  font-weight: 700; }
+  a.btn:active, a.btn:link, a.btn:visited {
+    color: #C3585B; }
+  a.btn:hover {
+    border-color: #d07e80;
+    color: #d07e80; }
 
 @media (min-width: 488px) and (max-width: 768px), (max-width: 487px) {
   body {
     font-size: .8em; }
 
-  header {
-    height: auto; }
-
-  header .card-wrap {
-    margin-top: 1em;
-    position: relative;
-    bottom: 0;
-    padding: 0; }
-
-  header .row {
-    padding: 0 2em; }
-
   section#schedule div.card {
-    width: 100%; } }
+    width: 100%; }
+
+  header img {
+    width: 7em;
+    margin-left: -3.5em;
+    top: 6.5em; }
+
+  section.photo-section .wrapper {
+    width: 100%; }
+    section.photo-section .wrapper h2 {
+      padding-left: 1em;
+      padding-right: 1em; } }
 @media (max-width: 487px) {
   body {
     font-size: .7em; }
@@ -243,21 +291,8 @@ section#schedule {
     display: none; }
 
   header .row {
-    padding: 0;
-    margin-top: 7em; }
-
-  header .row div {
-    display: inline-block;
-    width: 50%;
-    text-align: center !important;
-    padding-top: 1em;
+    padding: 2em 1em;
     font-size: .9em; }
-
-  header img {
-    top: 1em;
-    z-index: 2;
-    width: 7em;
-    margin-left: -3.5em; }
 
   section#schedule div.card {
     width: 100%; }
@@ -266,7 +301,14 @@ section#schedule {
     width: 100%; }
 
   section.clean div.section-wrap div.section-header {
-    margin: 1em; } }
+    margin: 1em; }
+
+  section.photo-section .wrapper h2 {
+    font-size: 2em; }
+  section.photo-section .wrapper .separator {
+    margin: 2em auto; }
+  section.photo-section .wrapper .timer {
+    font-size: .8em; } }
 @media (min-width: 488px) and (max-width: 768px) {
   section#schedule div.card {
     width: 100%; }
@@ -275,10 +317,16 @@ section#schedule {
     width: 100%; }
 
   section.clean div.section-wrap div.section-header {
-    margin: 1em; } }
+    margin: 1em; }
+
+  header .row {
+    padding: 2em 1em; } }
 @media (min-width: 769px) and (max-width: 992px) {
   body {
     font-size: .8em; }
+
+  header .row {
+    padding: 2em 1em; }
 
   section#schedule div.card {
     width: 100%; }
@@ -287,7 +335,10 @@ section#schedule {
     width: 100%; }
 
   section.clean div.section-wrap div.section-header {
-    margin: 1em; } }
+    margin: 1em; }
+
+  section.photo-section .wrapper {
+    width: 100%; } }
 @media (max-width: 768px) {
   #schedule .card-content div.time {
     display: none; }
@@ -304,5 +355,46 @@ section#schedule {
 
   #schedule div div.card div div.icon {
     width: auto !important; } }
+div#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.7);
+  z-index: 10; }
+  div#modal .wrap {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2em;
+    width: 80%;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background-color: white;
+    color: #333; }
+    div#modal .wrap h2 {
+      font-weight: 400;
+      margin-bottom: 1em; }
+    div#modal .wrap p {
+      font-size: 1.1em;
+      letter-spacing: .03em;
+      line-height: 1.2em;
+      text-align: justify; }
+    div#modal .wrap .close {
+      position: absolute;
+      top: 1em;
+      right: 2em;
+      color: #C3585B; }
+      div#modal .wrap .close:hover {
+        cursor: pointer;
+        color: #983739; }
 
 /*# sourceMappingURL=style.css.map */

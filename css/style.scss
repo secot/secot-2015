@@ -72,11 +72,7 @@ nav {
 header {
 	position: relative;
 	background-color: #ECF0F0;
-
-	/* margin-top fix */
-	padding-top: 1px;
-  margin-top: -1px;
-	
+	z-index: 3;
 
 
 	img {
@@ -126,6 +122,13 @@ header {
 
 /* Photo section*/
 section.photo-section {
+	/* margin-top fix */
+	@include box-shadow(0px, 5px, 7px, #666);
+	position: relative;
+	z-index: 4;
+
+	padding-top: 1px;
+  margin-top: -1px;
 	height: 100%;
 	background-image: url(../img/pres-bg.jpg);
 	background-repeat: no-repeat;
@@ -177,6 +180,7 @@ section.photo-section {
   		div {
   			width: 100%;
   			font-size: 1.3em;
+  			color: #ccc;
   		}
   	}
   }
@@ -187,17 +191,20 @@ section.clean {
 	background-color: white;
 	// padding: 4em 4em 2em 4em;
 	color: #555;
+	padding-bottom: 2em;
 
 	.section-wrap {
 		width: 90%;
 		margin: auto;
-		padding: 5em 0 1em 0;
+		padding: 6em 0 1em 0;
 	}
 
 	h2 {
 		font-weight: 400;
-		font-size: 2em;
-		
+		font-size: 3em;
+		margin-bottom: 1em;
+		font-family: "Lobster", cursive;
+		text-align: center;
 	}
 
 	h3 {
@@ -211,6 +218,9 @@ section.clean {
 /*guests section*/
 section#guests{
 	background-color: lighten(rgb(255, 255, 237),2%);
+	@include box-shadow(0px, 5px, 12px, #aaa);
+	position: relative;
+	z-index: 2;
 
 	.guests-wrap {
 		width: 70%;
@@ -220,16 +230,15 @@ section#guests{
 
 	.guest {
 		width: 100%;
-		margin-top: 2.4em;
+		// margin-top: 2.4em;
 		
 		.img-block {
-			width: 10em;
-			height: 10em;
+			width: 11em;
+			height: 11em;
 			display: inline-block;
 			img {
-				@include border-radius(2px);
-				// @include box-shadow(-2px, 2px, 7px, #333);
-				border: 1px solid #999;
+				@include border-radius(50%);
+				// @include box-shadow(-4px, 4px, 12px, #888);
 				height: 100%;
 				width: 100%;
 			}
@@ -237,29 +246,38 @@ section#guests{
 
 		h3 {
 			margin: 0;
-			padding: 1em 0;
+			padding: 0 0 1em 0;
 		}
 
 		.description {
 			display: inline-block;
-			width: calc(100% - 12em);
+			width: calc(100% - 13em);
 			padding-left: 2em;
 			vertical-align: top;
 			letter-spacing: .04em;
 			line-height: 1.4em;
+		
+			span {
+				color: #C3585B;
+				font-weight: 700;
+				&:hover {
+					cursor: pointer;
+				}
+			}
 		}
-
+		
 	}
 	.separator {
 		width: 50%;
-		margin: 0 auto;
 		border-bottom: 1px solid #ccc;
-		margin-top: 2em;
+		margin: 4em auto;
 	}
 }
 
 /*schedule section*/
 section#schedule {
+	display: none;
+
 	background-color: #ECF0F0;
 
 	div.card{
@@ -340,30 +358,70 @@ section#schedule {
 	}
 }
 
-/* Gambiarra */
+section.funding {
+	background-color: lighten(antiquewhite, 7%);
+	padding: 3em 0;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+
+	h2 {
+		font-family: 'Lobster', cursive;
+		font-size: 3em;
+		// margin: 0;
+	}
+	div.iframe-wrap {
+		margin: 2em 0 3em 0;
+	}
+}
+
 #schedule .card-content div.description div.hidden {
 	display: none;
 	margin-bottom: .3em;
+}
+
+a.btn {
+	@include border-radius(4px);
+	border: 3px solid #C3585B;
+	padding: 1.2em 1.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .03em;
+	font-size: .9em;
+	transition: all .3s;
+	font-weight: 700;
+
+	&:active, &:link, &:visited {
+		color: #C3585B;
+	} 
+
+	&:hover{
+		border-color: lighten(#C3585B, 10%);
+		color: lighten(#C3585B, 10%);
+	}
 }
 
 @media #{$tablet}, #{$smartphone}{
 	body {
 		font-size: .8em;
 	}
-	header {
-		height: auto;
-	}
-	header .card-wrap {
-		margin-top: 1em;
-		position: relative;
-		bottom: 0;
-		padding: 0;
-	}
-	header .row {
-		padding: 0 2em;
-	}
 	section#schedule div.card{
 		width: 100%;
+	}
+	header {
+		img {
+			width: 7em;
+			margin-left: -3.5em;
+			top: 6.5em;
+		}
+	}
+	section.photo-section .wrapper {
+		width: 100%;
+
+		h2 {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
 	}
 }
 @media #{$smartphone}{
@@ -373,22 +431,11 @@ section#schedule {
 	nav {
 		display: none;
 	}
-	header .row {
-		padding: 0;
-		margin-top: 7em;
-	}
-	header .row div {
-		display: inline-block;
-		width: 50%;
-		text-align: center !important;
-		padding-top: 1em;
-		font-size: .9em;
-	}
-	header img {
-		top: 1em;
-		z-index: 2;
-		width: 7em;
-		margin-left: -3.5em;
+	header {
+		.row {
+			padding: 2em 1em;
+			font-size: .9em;
+		}
 	}
 
 	section#schedule div.card{
@@ -399,11 +446,21 @@ section#schedule {
 	}
 	section.clean div.section-wrap div.section-header {
 		margin: 1em;
+	}
+
+	section.photo-section .wrapper {
+		h2 {
+			font-size: 2em;
+		}
+		.separator {
+			margin: 2em auto;
+		}
+		.timer{
+			font-size: .8em;
+		}
 	}
 }
 @media #{$tablet}{
-	section#schedule{}
-
 	section#schedule div.card{
 		width: 100%;
 	}
@@ -412,12 +469,22 @@ section#schedule {
 	}
 	section.clean div.section-wrap div.section-header {
 		margin: 1em;
+	}
+	header {
+		.row {
+			padding: 2em 1em;
+		}
 	}
 }
 @media #{$desktop-s}{
 	body {
 		font-size: .8em;
 	}
+	header {
+		.row {
+			padding: 2em 1em;
+		}
+	}
 	section#schedule div.card{
 		width: 100%;
 	}
@@ -426,6 +493,9 @@ section#schedule {
 	}
 	section.clean div.section-wrap div.section-header {
 		margin: 1em;
+	}
+	section.photo-section .wrapper {
+		width: 100%;
 	}
 }
 @media #{$desktop-m}{
@@ -451,5 +521,52 @@ section#schedule {
 	}
 	#schedule div div.card div div.icon {
 		width: auto !important;
+	}
+}
+
+div#modal {
+	display: none;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(40,40,40,.7);
+	z-index: 10;
+
+	.wrap {
+		@include border-radius(5px);
+		padding: 2em;
+		width: 80%;
+		height: 250px;
+		position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  top: 0;
+	  margin: auto;
+		background-color: white;
+		color: #333;
+
+		h2 {
+			font-weight: 400;
+			margin-bottom: 1em;
+		}
+		p {
+			font-size: 1.1em;
+			letter-spacing: .03em;
+			line-height: 1.2em;
+			text-align: justify;
+		}
+		.close {
+			position: absolute;
+			top: 1em;
+			right: 2em;
+			color: #C3585B;
+			&:hover {
+				cursor: pointer;
+				color: darken(#C3585B, 15%);
+			}
+		}
+
 	}
 }
