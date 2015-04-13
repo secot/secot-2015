@@ -1,3 +1,12 @@
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+/*  @include transition(all, 0.2s, ease-in-out); */
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -5,6 +14,7 @@
           border-radius: $radius;
 }
 /* Usage: @include border-radius(10px); */
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;
@@ -41,6 +51,7 @@ body {
 
 /* Start nav + session 1 (header)*/
 nav {
+	display: none;
 	font-weight: 700;
 	font-size: 0.875em;
 
@@ -123,7 +134,7 @@ header {
 /* Photo section*/
 section.photo-section {
 	/* margin-top fix */
-	@include box-shadow(0px, 5px, 7px, #666);
+	// @include box-shadow(0px, 6px, 19px, #367876);
 	position: relative;
 	z-index: 4;
 
@@ -222,6 +233,13 @@ section#guests{
 	position: relative;
 	z-index: 2;
 
+	h4 {
+		text-align: center;
+		font-size: 1.6em;
+		font-weight: 300;
+		color: #999;
+	}
+
 	.guests-wrap {
 		width: 70%;
 		margin: 0 auto;
@@ -270,7 +288,7 @@ section#guests{
 	.separator {
 		width: 50%;
 		border-bottom: 1px solid #ccc;
-		margin: 4em auto;
+		margin: 2.5em auto;
 	}
 }
 
@@ -359,25 +377,100 @@ section#schedule {
 }
 
 section.funding {
-	background-color: lighten(antiquewhite, 7%);
-	padding: 3em 0;
+	background-color: lighten(#edf4f4, 2%);
+	padding: 3em 0 5em 0;
 	text-align: center;
 	position: relative;
 	z-index: 1;
+	// @include box-shadow(0px, 5px, 12px, #aaa);
 
+	div.text-wrap {
+		width: 60%;
+		margin: auto;
+		font-size: 1.2em;
+		line-height: 1.36em;
+		p {
+			margin-bottom: .5em;
+		}
+	}
 	h2 {
 		font-family: 'Lobster', cursive;
 		font-size: 3em;
 		// margin: 0;
 	}
 	div.iframe-wrap {
-		margin: 2em 0 3em 0;
+		margin: 2em 0 4em 0;
+
+		iframe {
+			@include box-shadow(0px, 3px, 7px, #666);
+			@include border-radius(6px);
+		}
 	}
 }
 
 #schedule .card-content div.description div.hidden {
 	display: none;
 	margin-bottom: .3em;
+}
+
+section#funders {
+	padding: 3em 0 5em 0;
+
+	.img-box {
+		width: 15em;;
+		margin: auto;
+		img {
+			width: 15em;
+		}
+	}
+
+	h3 {
+		font-family: "Lobster", cursive !important;
+		text-align: center !important;
+		margin: 3em auto 2em auto !important;
+		font-size: 2em !important;
+	}
+
+	.img-grid {
+		width: 100%;
+		margin: 0 auto;
+		.row {
+			width: 60%;
+			margin: 1em auto 2em auto;
+			text-align: center;
+		}
+		.column-img-box {
+			display: inline-block;
+
+			width: 32.5%;
+			img {
+				width: 60%;
+			}
+		}
+	}
+
+}
+
+footer {
+	background-color: #3e8d8b;
+	padding: 3em;
+
+	h2 {
+		font-family: "Lobster", cursive;
+		font-size: 3em;
+		color: white;
+		padding-bottom: 1em;
+		text-align: center;
+	}
+
+	.img-box {
+		width: 400px;
+		margin: auto;
+
+		img {
+			width: 100%;
+		}
+	}
 }
 
 a.btn {
@@ -388,7 +481,8 @@ a.btn {
 	text-transform: uppercase;
 	letter-spacing: .03em;
 	font-size: .9em;
-	transition: all .3s;
+
+	@include transition(all, 0.3s, ease-in-out);
 	font-weight: 700;
 
 	&:active, &:link, &:visited {
@@ -554,7 +648,7 @@ div#modal {
 		p {
 			font-size: 1.1em;
 			letter-spacing: .03em;
-			line-height: 1.2em;
+			line-height: 1.4em;
 			text-align: justify;
 		}
 		.close {
