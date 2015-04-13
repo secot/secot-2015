@@ -48,10 +48,12 @@ function guestModal(e)
 	tex.innerHTML = e.getAttribute("data-text");
 
 	m.style.display = "block";
+	document.body.style.overflow="hidden";
 };
 
 function closeModal()
 {
 	document.getElementById("modal").style.display = "none";
+	document.body.style.overflow="auto";
 
 }
