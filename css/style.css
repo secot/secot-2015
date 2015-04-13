@@ -237,7 +237,7 @@ section#schedule {
 
 section.funding {
   background-color: #f3f8f8;
-  padding: 3em 0 5em 0;
+  padding: 3em 1em 5em 1em;
   text-align: center;
   position: relative;
   z-index: 1; }
@@ -302,7 +302,7 @@ footer {
     text-align: center;
     font-weight: normal; }
   footer .img-box {
-    width: 400px;
+    width: 20em;
     margin: auto; }
     footer .img-box img {
       width: 100%; }
@@ -346,7 +346,29 @@ a.btn {
     width: 100%; }
     section.photo-section .wrapper h2 {
       padding-left: 1em;
-      padding-right: 1em; } }
+      padding-right: 1em; }
+
+  section#guests .guests-wrap {
+    width: 90%; }
+  section#guests .guest {
+    text-align: center; }
+    section#guests .guest .img-block {
+      display: block;
+      margin: auto; }
+    section#guests .guest .description {
+      width: 85%;
+      padding: 2em 0 0 0; }
+
+  div#modal .wrap {
+    width: 92% !important;
+    height: 92% !important; }
+    div#modal .wrap p {
+      font-size: 1.2em !important; }
+    div#modal .wrap .close {
+      font-size: 1.2em !important; }
+
+  section.funding div.text-wrap {
+    width: 92%; } }
 @media (max-width: 487px) {
   body {
     font-size: .7em; }
@@ -372,7 +394,18 @@ a.btn {
   section.photo-section .wrapper .separator {
     margin: 2em auto; }
   section.photo-section .wrapper .timer {
-    font-size: .8em; } }
+    font-size: .8em; }
+
+  section#funders .img-grid .row {
+    margin: 0;
+    width: 100%; }
+    section#funders .img-grid .row div {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      section#funders .img-grid .row div img {
+        margin: 2em auto;
+        width: 15em; } }
 @media (min-width: 488px) and (max-width: 768px) {
   section#schedule div.card {
     width: 100%; }
@@ -384,7 +417,10 @@ a.btn {
     margin: 1em; }
 
   header .row {
-    padding: 2em 1em; } }
+    padding: 2em 1em; }
+
+  section#funders .img-grid .row {
+    width: 90%; } }
 @media (min-width: 769px) and (max-width: 992px) {
   body {
     font-size: .8em; }
@@ -402,7 +438,13 @@ a.btn {
     margin: 1em; }
 
   section.photo-section .wrapper {
-    width: 100%; } }
+    width: 100%; }
+
+  section#guests .guests-wrap {
+    width: 90%; }
+
+  section#funders .img-grid .row {
+    width: 70%; } }
 @media (max-width: 768px) {
   #schedule .card-content div.time {
     display: none; }

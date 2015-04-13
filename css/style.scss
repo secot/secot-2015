@@ -378,7 +378,7 @@ section#schedule {
 
 section.funding {
 	background-color: lighten(#edf4f4, 2%);
-	padding: 3em 0 5em 0;
+	padding: 3em 1em 5em 1em;
 	text-align: center;
 	position: relative;
 	z-index: 1;
@@ -465,7 +465,7 @@ footer {
 	}
 
 	.img-box {
-		width: 400px;
+		width: 20em;
 		margin: auto;
 
 		img {
@@ -518,6 +518,40 @@ a.btn {
 			padding-right: 1em;
 		}
 	}
+
+	section#guests {
+		.guests-wrap { 
+			width: 90%;
+		}
+		.guest {
+			text-align: center;
+			.img-block {
+				display: block;
+				margin: auto;
+			}
+			.description {
+				width: 85%;
+				padding: 2em 0 0 0;
+			}
+		}
+	}
+
+	div#modal .wrap {
+		width: 92% !important;
+		height: 92% !important;
+
+		p {
+			font-size: 1.2em !important;
+		}
+		.close {
+			font-size: 1.2em !important;
+		}
+	}
+
+	section.funding div.text-wrap {
+		width: 92%;
+	}
+
 }
 @media #{$smartphone}{
 	body {
@@ -554,6 +588,25 @@ a.btn {
 			font-size: .8em;
 		}
 	}
+	section#funders .img-grid .row {
+		margin: 0;
+		width: 100%;
+		div {
+			display: block;
+			width: 100%;
+			text-align: center;
+			img {
+				margin: 2em auto;
+				width: 15em;
+			}
+		}
+	}
+	footer {
+		.img-box {
+			// width: 300px;
+		}
+	}
+
 }
 @media #{$tablet}{
 	section#schedule div.card{
@@ -569,6 +622,9 @@ a.btn {
 		.row {
 			padding: 2em 1em;
 		}
+	}
+	section#funders .img-grid .row {
+		width: 90%;
 	}
 }
 @media #{$desktop-s}{
@@ -592,9 +648,17 @@ a.btn {
 	section.photo-section .wrapper {
 		width: 100%;
 	}
+
+	section#guests {
+		.guests-wrap { 
+			width: 90%;
+		}
+	}
+	section#funders .img-grid .row {
+		width: 70%;
+	}
 }
 @media #{$desktop-m}{
-	
 }
 @media #{$desktop-l}{
 	
