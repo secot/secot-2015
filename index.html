@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='stylesheet' type='text/css' href="./css/style.css">
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway:300,400,700'>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lobster'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
+	
+	<script src="./js/timer.js"></script>
 </head>
 <body>
+	
+	<div id="modal">
+		<div class="wrap">
+			<h2 class="title"></h2>
+			<p class="text"></p>
+			<span class="close" onclick="closeModal()">fechar</span>
+		</div>
+	</div>
 
-	<header>
-		<img src="./img/main-logo.png" alt="logo">
+	<section class="photo-section">
 		<nav>
 			<ul class="right-nav">
 				<li><a href="#">SOBRE</a></li>
@@ -18,6 +30,97 @@
 				<li><a href="#">REGISTRE-SE</a></li>
 			</ul>
 		</nav>
+		<div class="wrapper">
+			
+      <h1>S<small>E</small>C<small>O</small>T</h1>
+      <h2>VII Semana da Computação e Tecnologia</h2>
+      <div class="separator"></div>
+
+      <div class="timer" id="timer">
+        <div>
+          <span id="d"></span>
+          <div>dias</div>
+        </div>
+
+        <div>
+          <span id="h"></span>
+          <div>horas</div>
+        </div>
+
+        <div>
+          <span id="m"></span>
+          <div>minutos</div>
+        </div>
+
+        <div>
+          <span id="s"></span>
+          <div>segundos</div>
+        </div>
+      </div>
+
+      
+  </div>
+ 	  <div class="svg-wrap">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="126px" height="167px" viewBox="0 0 126 167" enable-background="new 0 0 126 167" xml:space="preserve">
+				<g>
+					<path fill="#DDDDDD" d="M63.521,36.166c24.381,0,44.146,28.355,44.146,63.334s-19.765,63.334-44.146,63.334
+						S19.375,134.479,19.375,99.5S39.139,36.166,63.521,36.166 M63.521,34.166c-12.465,0-24.134,6.892-32.857,19.406
+						C22.094,65.867,17.375,82.177,17.375,99.5s4.72,33.633,13.289,45.928c8.723,12.515,20.392,19.406,32.857,19.406
+						s24.134-6.892,32.857-19.406c8.569-12.294,13.289-28.605,13.289-45.928s-4.72-33.633-13.289-45.928
+						C87.654,41.058,75.985,34.166,63.521,34.166L63.521,34.166z">
+					</path>
+				</g>
+				<path fill="#FCCDD2" d="M69.85,72.909c0,3.496-2.833,6.329-6.33,6.329l0,0c-3.497,0-6.33-2.833-6.33-6.329V53.772
+					c0-3.496,2.833-6.329,6.33-6.329l0,0c3.496,0,6.33,2.833,6.33,6.329V72.909z">
+					<animate attributeType="CSS" attributeName="opacity" 
+							begin="0s" 
+							from="1" 
+							to=".5" 
+							dur="3s"
+							values="1; .5; 1"
+	 						keyTimes="0; 0.33; 1"
+							repeatCount="indefinite"/>	
+				</path>
+				<polyline fill="#FCCDD2" points="77.165,95.481 63.521,109.125 49.876,95.481 ">
+					<animate attributeType="CSS" attributeName="opacity" 
+						begin="0s" 
+						from="1" 
+						to="0" 
+						dur="1.5s"
+						values="1; 0; 0"
+						keyTimes="0; 0.7; 1"
+						repeatCount="indefinite"/>
+				</polyline>
+				<polyline fill="#FCCDD2" points="77.165,115.072 63.521,128.717 49.876,115.072 ">
+					<animate attributeType="CSS" attributeName="opacity" 
+						begin=".5s" 
+						from="1" 
+						to="0" 
+						dur="1.5s"
+						values="1; 0; 0"
+						keyTimes="0; 0.7; 1"
+						repeatCount="indefinite"/>
+				</polyline>
+				<polyline fill="#FCCDD2" points="77.165,134.664 63.521,148.308 49.876,134.664 ">
+					<animate attributeType="CSS" attributeName="opacity" 
+						begin="1s" 
+						from="1" 
+						to="0" 
+						dur="1.5s"
+						values="1; 0; 0"
+						keyTimes="0; 0.7; 1"
+						repeatCount="indefinite"/>
+				</polyline>
+				<path fill="none" stroke="#DDDDDD" stroke-width="2" stroke-miterlimit="10" d="M63.521,35.166c0,0-5.365-9.176,0-14.541
+					s0-14.625,0-14.625"/>
+			</svg>
+	  </div>
+	</section>
+
+	<header>
+		<img src="./img/main-logo.png" alt="logo">
+		
 		<div class="row">
 			<div class="left-container">
 				<h2>Evento Gratuito</h2>
@@ -29,16 +132,330 @@
 				<p>Sorocaba - SP</p>
 			</div>
 		</div>
-		<div class="card-wrap">
+		<!-- <div class="card-wrap">
 			<div class="card">
 				<h1>VII Semana da Computação e Tecnologia</h1>
 			</div>
-		</div>
+		</div> -->
 	</header>
 
-	<section class="photo-section">
-		<img src="./img/presentation.jpg" alt="">
+
+	<section class="clean" id="guests">
+		<div class="section-wrap">
+			<div class="section-header">
+				<h2>Palestrantes</h2>
+			</div>
+		</div>
+		<div class="guests-wrap">
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/clecio.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Clécio Bachini</h3>
+					<p class="mini-cv">Evangelista e entusiasta da Open Web Platform. Pioneiro na implantação de soluções em HTML5 no Brasil. Colaborador do W3C e iMasters. Associado ao Instituto Faber-Ludens. Palestrante da Conferência Web W3C Brasil, Frontin Sampa, Frontin Curitiba, Frontin Londrina, Frontin Maringá, Frontin Interior, Road Show TI Senac São Paulo, SESC, FATEC-SP, 7Masters iMasters, Intercom iMasters, Unicsul, WebExpo Forum, Conip/W3C entre outros. Membro do Grupo de Trabalho sobre Acessibilidade Digital do W3C Escritório Brasil. Coordenou desenvolvimento de soluções para Ed. Moderna, Vivo, Unidas, Modulo Security, Janssen-Cilag, Knauf entre outros.</p>
+
+				</div>
+			</div>
+			<div class="separator"></div>
+
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/marcelo.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Marcelo Nunes Alves Costa</h3>
+					<p class="mini-cv">Formação em Engenharia da Computação pela Universidade de Pernambuco, mestrado em Tecnologia da Informação e Media pela Universitat Pompeu Fabra (Barcelona) e atualmente MBA em Conhecimento, Tecnologia e Informação pela FIA-SP. Com experiência em Telecom e TI, Marcelo Nunes é gerente de novos negócios do CESAR onde sua principal atribuição é disseminar inovação e novas tecnologias para o mercado com o propósito de criar parcerias de negócio e multiplicar conhecimentos.</p>
+
+				</div>
+			</div>
+			<div class="separator"></div>
+
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/akita.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Fábio Akita</h3>
+					<p class="mini-cv">É co-fundador da boutique de software Codeminer 42. Desde 2008 também é co-organizador da Rubyconf Brasil junto com a Locaweb. Ativista de Ruby on Rails desde 2006, publicou o primeiro livro do assunto. Já realizou quase 100 palestras pelo Brasil e pelo mundo. Trabalha como programador desde o começo dos anos 90 e passou por todas as principais tecnologias do mercado nesse período. Publica artigos no blog akitaonrails.com desde 2006.</p>
+
+				</div>
+			</div>
+			<div class="separator"></div>
+
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/lucas.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Lucas Renan</h3>
+					<p class="mini-cv">Ruby developer, AIESECer, corintiano, straight edge, GURU Sorocaba co-founder, interested in big data and passionate about presentations.</p>
+				</div>
+			</div>
+			
+			<div class="separator"></div>
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/suissa.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Jean Nascimento (Suissa)</h3>
+					<p class="mini-cv">Mais de 13 anos de experiência em confecção de sites(html, CSS e DHTML), 9 anos de experiência em desenvolvimento de sites/sistemas em PHP, xHTML, CSS e jQuery. Já foi professor na Faculdade FAFIT em Itararé-SP. Atualmente trabalha com consultoria, cursos e treinamentos em Javascript, Node.js e MongoDb pela sua empresa Suissa Corp e como CIO do MeGaranto.</p>
+
+				</div>
+			</div>
+			<div class="separator"></div>
+
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/nilo.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Nilo Faber</h3>
+					<p class="mini-cv">É bacharel em Ciência da Computação e MBA em gestão empreendedora de negócios pela. Empreendeu na D-Nex consultoria e desenvolvimento de sistemas corporativos, atuou no setor sucroalcooleiro com automação de processos industriais e, atualmente, desenvolve novos negócios no C.E.S.A.R.</p>
+
+				</div>
+			</div>
+			<div class="separator"></div>
+
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/vitor.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Vitor Kusiaki</h3>
+					<p class="mini-cv">Sou estudante de Ciência da Computação, desenvolvedor web na Codeminer42 e programador Ruby. Rock 'n roll nas horas vagas, engajado em desenvolver a comunidade tecnológica, repassando meus aprendizados, além de aprender muito com isso também.</p>
+				</div>
+			</div>
+
+		</div>
+			<h4>* A lista completa de palestrantes e agenda serão divulgados em breve.</h4>
 	</section>
 
+	<section class="funding clean">
+		<h2>Ajude-nos a realizar este evento!</h2>
+		<div class="text-wrap">
+			<p>Estamos recebendo ajuda de algumas empresas, mas ainda não temos o bastante. Ajude-nos com o quanto puder e receba recompensas.</p>
+			<p>Contribuições via Paypal, Pagseguro e até boleto bancário.</p>
+		</div>
+		<div class="iframe-wrap">
+			<iframe frameborder="0" height="314px" src="https://www.catarse.me/pt/projects/11795/embed" width="300px" scrolling="no"></iframe>
+		</div>
+		<p>
+				<a href="https://www.catarse.me/pt/secot" target="_blank" class="btn btn-lg">Clique aqui para maiores informações</a>
+		</p>
+	</section>
+
+	<section class="clean" id="funders">
+		<h2>Patrocínio</h2>
+		<div class="img-box">
+			<a href="http://www.cesar.org.br/" target="_blank"><img src="./img/cesar.jpg" alt=""></a>
+		</div>
+		<h3>Apoio</h3>
+		<div class="img-grid">
+			<div class="row">
+				<div class="column-img-box">
+					<a href="http://www.casadocodigo.com.br/" target="_blank"><img src="./img/casadocodigo.jpg" alt=""></a>
+				</div>
+				<div class="column-img-box">
+					<a href="http://www.codeminer42.com/" target="_blank"><img src="./img/codeminer42.png" alt=""></a>		
+				</div>
+				<div class="column-img-box">
+					<a href="http://gurusorocaba.com.br/" target="_blank"><img src="./img/guru.png" alt=""></a>		
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<a href="http://www.proex.ufscar.br/" target="_blank"><img src="./img/proexlogo.png" alt=""></a>		
+				</div>
+				<div class="column-img-box">
+					<a href="http://www.redbull.com/br/pt" target="_blank"><img src="./img/redbull.jpg" alt=""></a>		
+				</div>
+				<div class="column-img-box">
+					<a href="http://novatec.com.br/" target="_blank"><img src="./img/novatec.jpg" alt=""></a>		
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="clean" id="schedule">
+		<div class="section-wrap">
+			<div class="section-header">
+				<h2>Agenda</h2>
+				<h3>11 à 14 de Maio</h3>
+			</div>
+
+			<!-- Card Start -->
+			<div class="card">
+				<div class="card-content">
+					<h4>11 de Maio - Segunda-Feira</h4>
+				</div>
+				<div class="card-content">
+					<div class="icon">
+						<i class="fa fa-clock-o"></i>
+					</div>
+					<div class="events-wrap">
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>09:00<small>AM</small> - 10:30<small>AM</small></p></div>
+								<div class="title"><p>Palestra muito foda que será foda pra caralho que vai falar um monte de coisa bacana e pode ser um nome bem grannde que tamb'em vai ficar legau</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+						<div style="clear: both;"></div>
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>13:00<small>PM</small> - 14:30<small>PM</small></p></div>
+								<div class="title"><p>Outra Palestra muito mais foda que a anterior</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+						<div style="clear: both;"></div>
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>13:00<small>PM</small> - 14:30<small>PM</small></p></div>
+								<div class="title"><p>Outra Palestra muito mais foda que a anterior</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+					</div> <!-- events-wrap end -->
+					<div style="clear: both;"></div>
+				</div>
+			</div> <!-- card end -->
+			<!-- Card Start -->
+			<div class="card">
+				<div class="card-content">
+					<h4>12 de Maio - Terça-Feira</h4>
+				</div>
+				<div class="card-content">
+					<div class="icon">
+						<i class="fa fa-clock-o"></i>
+					</div>
+					<div class="events-wrap">
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>09:00<small>AM</small> - 10:30<small>AM</small></p></div>
+								<div class="title"><p>Palestra muito foda que será foda pra caralho que vai falar um monte de coisa bacana e pode ser um nome bem grannde que tamb'em vai ficar legau</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+						<div style="clear: both;"></div>
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>13:00<small>PM</small> - 14:30<small>PM</small></p></div>
+								<div class="title"><p>Outra Palestra muito mais foda que a anterior</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+					</div> <!-- events-wrap end -->
+					<div style="clear: both;"></div>
+				</div>
+			</div> <!-- card end -->
+			<!-- Card Start -->
+			<div class="card">
+				<div class="card-content">
+					<h4>13 de Maio - Quarta-Feira</h4>
+				</div>
+				<div class="card-content">
+					<div class="icon">
+						<i class="fa fa-clock-o"></i>
+					</div>
+					<div class="events-wrap">
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>09:00<small>AM</small> - 10:30<small>AM</small></p></div>
+								<div class="title"><p>Palestra muito foda que será foda pra caralho que vai falar um monte de coisa bacana e pode ser um nome bem grannde que tamb'em vai ficar legau</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+						<div style="clear: both;"></div>
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>13:00<small>PM</small> - 14:30<small>PM</small></p></div>
+								<div class="title"><p>Outra Palestra muito mais foda que a anterior</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+					</div> <!-- events-wrap end -->
+					<div style="clear: both;"></div>
+				</div>
+			</div> <!-- card end -->
+			<!-- Card Start -->
+			<div class="card">
+				<div class="card-content">
+					<h4>14 de Maio - Quinta-Feira</h4>
+				</div>
+				<div class="card-content">
+					<div class="icon">
+						<i class="fa fa-clock-o"></i>
+					</div>
+					<div class="events-wrap">
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>09:00<small>AM</small> - 10:30<small>AM</small></p></div>
+								<div class="title"><p>Palestra muito foda que será foda pra caralho que vai falar um monte de coisa bacana e pode ser um nome bem grannde que tamb'em vai ficar legau</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+						<div style="clear: both;"></div>
+						<div class="event-line"> <!-- event line has: time & description -->
+							<div class="time">
+								<p>das 09:00<small>AM</small></p>
+								<p>às 10:30<small>AM</small></p>
+							</div>
+							<div class="description"> <!-- description has: title, guest and hidden time for responsive -->
+								<div class="hidden"><p>13:00<small>PM</small> - 14:30<small>PM</small></p></div>
+								<div class="title"><p>Outra Palestra muito mais foda que a anterior</p></div>
+								<div class="guest"><p>Palestrante foda</div>
+							</div>
+						</div> <!-- event-line end -->
+					</div> <!-- events-wrap end -->
+					<div style="clear: both;"></div>
+				</div>
+			</div> <!-- card end -->
+
+
+
+		</div> <!-- section-wrap end -->
+
+	</section>
+
+	<footer>
+		<h2>Realização</h2>
+		<div class="img-box">
+			<img src="./img/ufscar.png" alt="">
+		</div>
+	</footer>
 </body>
 </html>

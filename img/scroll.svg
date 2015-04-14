@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="126px" height="167px" viewBox="0 0 126 167" enable-background="new 0 0 126 167" xml:space="preserve">
+<g>
+	<path fill="#FFFFFF" d="M63.521,36.166c24.381,0,44.146,28.355,44.146,63.334s-19.765,63.334-44.146,63.334
+		S19.375,134.479,19.375,99.5S39.139,36.166,63.521,36.166 M63.521,34.166c-12.465,0-24.134,6.892-32.857,19.406
+		C22.094,65.867,17.375,82.177,17.375,99.5s4.72,33.633,13.289,45.928c8.723,12.515,20.392,19.406,32.857,19.406
+		s24.134-6.892,32.857-19.406c8.569-12.294,13.289-28.605,13.289-45.928s-4.72-33.633-13.289-45.928
+		C87.654,41.058,75.985,34.166,63.521,34.166L63.521,34.166z"/>
+</g>
+<path fill="#C7595D" d="M69.85,72.909c0,3.496-2.833,6.329-6.33,6.329l0,0c-3.497,0-6.33-2.833-6.33-6.329V53.772
+	c0-3.496,2.833-6.329,6.33-6.329l0,0c3.496,0,6.33,2.833,6.33,6.329V72.909z"/>
+<polyline fill="#C7595D" points="77.165,95.481 63.521,109.125 49.876,95.481 ">
+	<animate attributeType="CSS" attributeName="opacity" 
+								   begin="0s" from="1" to="0" dur="1s" repeatCount="indefinite"/>
+</polyline>
+<polyline fill="#C7595D" points="77.165,115.072 63.521,128.717 49.876,115.072 ">
+	<animate attributeType="CSS" attributeName="opacity" 
+								   begin=".33s" from="1" to="0" dur="1s" repeatCount="indefinite"/>
+</polyline>
+<polyline fill="#C7595D" points="77.165,134.664 63.521,148.308 49.876,134.664 ">
+	<animate attributeType="CSS" attributeName="opacity" 
+								   begin=".66s" from="1" to="0" dur="1s" repeatCount="indefinite"/>
+</polyline>
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M63.521,35.166c0,0-5.365-9.176,0-14.541
+	s0-14.625,0-14.625"/>
+</svg>
