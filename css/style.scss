@@ -195,6 +195,16 @@ section.photo-section {
   		}
   	}
   }
+
+  .svg-wrap {
+  	width: 100%;
+  	position: absolute;
+  	text-align: center;
+  	bottom: 0;
+  	svg {
+  		width: 5em;
+  	}
+  }
 }
 
 /*section preset*/
