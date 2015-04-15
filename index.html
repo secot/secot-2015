@@ -8,7 +8,8 @@
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lobster'>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
-	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgAyPM3Fn9VTdmVwQcDVroHQbnjnWgfuk&sensor=false"></script>
+
 	<script src="./js/timer.js"></script>
 </head>
 <body>
@@ -117,15 +118,10 @@
 				<p>Sorocaba - SP</p>
 			</div>
 		</div>
-		<!-- <div class="card-wrap">
-			<div class="card">
-				<h1>VII Semana da Computação e Tecnologia</h1>
-			</div>
-		</div> -->
 	</header>
+
 	<section class="logo-ribbon">
 		<img src="./img/main-logo.png" alt="logo">
-		
 	</section>
 
 	<section class="clean" id="guests">
@@ -135,6 +131,7 @@
 			</div>
 		</div>
 		<div class="guests-wrap">
+
 			<div class="guest">
 				<div class="img-block">
 					<img src="./img/clecio.jpg" alt="">
@@ -142,10 +139,8 @@
 				<div class="description">
 					<h3>Clécio Bachini</h3>
 					<p class="mini-cv">Evangelista e entusiasta da Open Web Platform. Pioneiro na implantação de soluções em HTML5 no Brasil. Colaborador do W3C e iMasters. Associado ao Instituto Faber-Ludens. Palestrante da Conferência Web W3C Brasil, Frontin Sampa, Frontin Curitiba, Frontin Londrina, Frontin Maringá, Frontin Interior, Road Show TI Senac São Paulo, SESC, FATEC-SP, 7Masters iMasters, Intercom iMasters, Unicsul, WebExpo Forum, Conip/W3C entre outros. Membro do Grupo de Trabalho sobre Acessibilidade Digital do W3C Escritório Brasil. Coordenou desenvolvimento de soluções para Ed. Moderna, Vivo, Unidas, Modulo Security, Janssen-Cilag, Knauf entre outros.</p>
-
 				</div>
 			</div>
-			<!-- <div class="separator"></div> -->
 
 			<div class="guest">
 				<div class="img-block">
@@ -154,10 +149,8 @@
 				<div class="description">
 					<h3>Marcelo Nunes Alves Costa</h3>
 					<p class="mini-cv">Formação em Engenharia da Computação pela Universidade de Pernambuco, mestrado em Tecnologia da Informação e Media pela Universitat Pompeu Fabra (Barcelona) e atualmente MBA em Conhecimento, Tecnologia e Informação pela FIA-SP. Com experiência em Telecom e TI, Marcelo Nunes é gerente de novos negócios do CESAR onde sua principal atribuição é disseminar inovação e novas tecnologias para o mercado com o propósito de criar parcerias de negócio e multiplicar conhecimentos.</p>
-
 				</div>
 			</div>
-			<!-- <div class="separator"></div> -->
 
 			<div class="guest">
 				<div class="img-block">
@@ -166,10 +159,8 @@
 				<div class="description">
 					<h3>Fábio Akita</h3>
 					<p class="mini-cv">É co-fundador da boutique de software Codeminer 42. Desde 2008 também é co-organizador da Rubyconf Brasil junto com a Locaweb. Ativista de Ruby on Rails desde 2006, publicou o primeiro livro do assunto. Já realizou quase 100 palestras pelo Brasil e pelo mundo. Trabalha como programador desde o começo dos anos 90 e passou por todas as principais tecnologias do mercado nesse período. Publica artigos no blog akitaonrails.com desde 2006.</p>
-
 				</div>
 			</div>
-			<!-- <div class="separator"></div> -->
 
 			<div class="guest">
 				<div class="img-block">
@@ -181,7 +172,6 @@
 				</div>
 			</div>
 			
-			<!-- <div class="separator"></div> -->
 			<div class="guest">
 				<div class="img-block">
 					<img src="./img/suissa.jpg" alt="">
@@ -189,10 +179,8 @@
 				<div class="description">
 					<h3>Jean Nascimento (Suissa)</h3>
 					<p class="mini-cv">Mais de 13 anos de experiência em confecção de sites (HTML, CSS e DHTML), 9 anos de experiência em desenvolvimento de sites/sistemas em PHP, xHTML, CSS e jQuery. Já foi professor na Faculdade FAFIT em Itararé-SP. Atualmente trabalha com consultoria, cursos e treinamentos em Javascript, Node.js e MongoDb pela sua empresa Suissa Corp e como CIO do MeGaranto.</p>
-
 				</div>
 			</div>
-			<!-- <div class="separator"></div> -->
 
 			<div class="guest">
 				<div class="img-block">
@@ -201,10 +189,8 @@
 				<div class="description">
 					<h3>Nilo Faber</h3>
 					<p class="mini-cv">É bacharel em Ciência da Computação e MBA em gestão empreendedora de negócios pela. Empreendeu na D-Nex consultoria e desenvolvimento de sistemas corporativos, atuou no setor sucroalcooleiro com automação de processos industriais e, atualmente, desenvolve novos negócios no C.E.S.A.R.</p>
-
 				</div>
 			</div>
-			<!-- <div class="separator"></div> -->
 
 			<div class="guest">
 				<div class="img-block">
@@ -222,10 +208,22 @@
 				<p>Selecionaremos os mais votados de acordo com a disponibilidade no evento.</p>
 			</div>
 
-
-
 		</div>
 			<h4>* A lista completa de palestrantes e agenda serão divulgados em breve.</h4>
+	</section>
+
+	<section id="map-section" class="clean">
+		<h2>Local</h2>
+		<div class="map-wrap">
+			<div id="map"></div>
+			<div class="map-info">
+				<h4>UFSCar - Campus Sorocaba</h4>
+				<p>Rodovia João Leme dos Santos, (SP-264), Km 110, s/n</p>
+				<p>Bairro Itinga</p>
+				<p>Sorocaba - SP. 18052-780</p>
+				<p><a href="https://www.google.com.br/maps/place/UFSCAR+-+Campus+Sorocaba/@-23.583574,-47.523041,17z/data=!3m1!4b1!4m2!3m1!1s0x94c58955e4f6cf27:0x42d15f63aaffc1bd">Link para o mapa</a></p>
+			</div>
+		</div>
 	</section>
 
 	<section class="funding clean">
@@ -437,7 +435,6 @@
 				</div>
 			</div> <!-- card end -->
 		</div> <!-- section-wrap end -->
-
 	</section>
 
 	<section class="clean" id="footer">
@@ -476,5 +473,6 @@
 			<span>Carlos Andrade</span>
 		</p>
 	</section>
+	
 </body>
 </html>

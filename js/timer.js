@@ -1,3 +1,6 @@
+var map;
+google.maps.event.addDomListener(window, 'load', initialize);
+
 window.onload = function(){
 	var e = function(){
 		var o = new Date("5/11/2015"),
@@ -26,12 +29,9 @@ window.onload = function(){
 				n.setAttribute("data-title",l[i].previousSibling.previousSibling.innerHTML);
 				n.setAttribute("data-text",l[i].innerHTML);
 				n.innerHTML = "ver tudo"
-
 				l[i].innerHTML = l[i].innerHTML.substring(0, 320);
 				l[i].innerHTML += "... ";
-
 				n.setAttribute("onclick","guestModal(this)");
-
 				l[i].appendChild(n);
 			};
 		}
@@ -56,4 +56,26 @@ function closeModal()
 	document.getElementById("modal").style.display = "none";
 	document.body.style.overflow="auto";
 
+}
+
+function initialize() 
+{
+
+    var mapOptions = {
+        scrollwheel: false,
+        draggable: false,
+        disableDefaultUI: true,
+        center: new google.maps.LatLng(-23.583574,-47.4899618),
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(-23.583574, -47.523041),
+        map: map,
+        title: '',
+        icon: './img/map-marker.png'
+    });
 }

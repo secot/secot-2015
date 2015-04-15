@@ -28,6 +28,19 @@
 }
 /* Usage: @include box-shadow(3px, 3px, 10px, #555); */
 
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left right, left right, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(right, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(right, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(right, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(right, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(right, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+//@include linear-gradient(#000, #BADA55); // Stick in your favourite HEX colours
+
+
 /* Media Queries */
 $smartphone: "(max-width: 487px)";
 $tablet: 		 "(min-width: 488px) and (max-width: 768px)";
@@ -92,6 +105,7 @@ section.logo-ribbon{
 	  z-index: 3;
 	}
 }
+
 header {
 	position: relative;
 	background-color: white;
@@ -118,11 +132,8 @@ header {
 		}
 	}
 
-	
-
 	.row {
 		width: 70%;
-		// height: 12em;
 		padding: 1em 0;
 		margin: auto;
 		
@@ -447,8 +458,8 @@ section#schedule {
 }
 
 section.funding {
-	background-color: #E0F3B9;
-	padding: 3em 1em 5em 1em;
+	background-color: lighten(#E0F3B9, 10%);
+	padding: 5em 1em 5em 1em;
 	text-align: center;
 	position: relative;
 	z-index: 1;
@@ -516,10 +527,47 @@ section#funders {
 
 }
 
-section#footer {
-	background-color: lighten(#8AB5B3, 14%);
-	padding: 3em;
+section#map-section {
+	padding: 3em 0 0 0;
+	position: relative;
+	background-color: lighten(rgb(255, 255, 237),2%);
+	
+	.map-wrap {
+		position: relative;
+		height: 500px;
+		width: 100%;
+		
+		#map {
+			height: 100%;
+			width: 100%;
+		}
 
+		.map-info {
+			position: absolute;
+			right: 3em;
+			bottom: 3em;
+			padding: 1em;
+			background-color: white;
+			z-index: 100;
+			text-align: right;
+
+			h4 {
+				line-height: 1.6em;
+			}
+			p {
+				line-height: 1.4em;
+				a {
+					line-height: 1.9em;
+				}
+			}
+		}
+	}
+
+}
+
+section#footer {
+	background-color: #ECF0F0;
+	padding: 3em;
 
 	.img-box {
 		width: 20em;
@@ -531,15 +579,16 @@ section#footer {
 	}
 
 	#people {
-		text-align: justify;
+		text-align: center;
 
 		span {
-			padding: .5em;
+			padding: .55em;
 			margin: 2em 0 !important;
-			background-color: darken(#8AB5B3, 15%);
+			background-color: steelblue;
+			@include linear-gradient(steelblue, darken(steelblue, 7%));
 			color: white;
 			@include border-radius(3px);
-			line-height: 2.5em;
+			line-height: 2.6em;
 			white-space: nowrap;
 		}
 	}
@@ -596,15 +645,8 @@ a.btn {
 			width: 90%;
 		}
 		.guest {
-			text-align: center;
-			.img-block {
-				display: block;
-				margin: auto;
-			}
-			.description {
-				width: 85%;
-				padding: 2em 0 0 0;
-			}
+			width: 100%;
+			display: block;
 		}
 	}
 
@@ -634,8 +676,14 @@ a.btn {
 	}
 	header {
 		.row {
-			padding: 2em 1em;
+			width: 94%;
 			font-size: .9em;
+			h2 {
+				font-size: 1.8em !important;
+			}
+		}
+		.about {
+			width: 94%;
 		}
 	}
 
@@ -692,7 +740,10 @@ a.btn {
 	}
 	header {
 		.row {
-			padding: 2em 1em;
+			width: 90%;
+		}
+		.about {
+			width: 90%;
 		}
 	}
 	section#funders .img-grid .row {
@@ -705,7 +756,10 @@ a.btn {
 	}
 	header {
 		.row {
-			padding: 2em 1em;
+			width: 80%;
+		}
+		.about {
+			width: 80%;
 		}
 	}
 	section#schedule div.card{
@@ -723,7 +777,7 @@ a.btn {
 
 	section#guests {
 		.guests-wrap { 
-			width: 90%;
+			width: 100%;
 		}
 	}
 	section#funders .img-grid .row {
