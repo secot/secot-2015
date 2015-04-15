@@ -76,6 +76,6 @@ function initialize()
         position: new google.maps.LatLng(-23.583574, -47.523041),
         map: map,
         title: '',
-        icon: './img/map-marker.png'
+        icon: './img/art/map-marker.png'
     });
 }
