@@ -257,8 +257,16 @@ section.clean {
 	h3 {
 		font-weight: 400;
 		margin: .5em;
-		
+		font-size: 1.3em;
 	}
+
+	h3.subheader {
+		font-family: "Lobster", cursive !important;
+		text-align: center !important;
+		margin: 3em auto 2em auto !important;
+		font-size: 2em !important;
+	}
+
 
 }
 
@@ -279,16 +287,18 @@ section#guests{
 		width: 90%;
 		margin: 0 auto;
 		padding-bottom: 4em;
+		text-align: center;
 	}
 
 	.guest {
 		width: 49.5%;
 		display: inline-block;
-		margin-top: 2.4em;
+		margin-top: 3.4em;
 		
 		&.c4p-wrap {
 			text-align: center;
 			vertical-align: bottom;
+				padding-bottom: 5em;
 			h3 {
 				font-size: 1.5em;
 				margin-bottom: 2em;
@@ -306,9 +316,8 @@ section#guests{
 		}
 
 		.img-block {
-			width: 90%;
+			width: 100%;
 			display: block;
-			text-align: center;
 			img {
 				width: 9em;
 				@include border-radius(50%);
@@ -322,7 +331,7 @@ section#guests{
 
 		.description {
 			display: inline-block;
-			width: 90%;
+			width: 85%;
 			margin: auto;
 			vertical-align: top;
 
@@ -487,13 +496,6 @@ section#funders {
 		}
 	}
 
-	h3 {
-		font-family: "Lobster", cursive !important;
-		text-align: center !important;
-		margin: 3em auto 2em auto !important;
-		font-size: 2em !important;
-	}
-
 	.img-grid {
 		width: 100%;
 		margin: 0 auto;
@@ -514,17 +516,10 @@ section#funders {
 
 }
 
-footer {
-	background-color: #8AB5B3;
+section#footer {
+	background-color: lighten(#8AB5B3, 14%);
 	padding: 3em;
 
-	h2 {
-		font-family: "Lobster", cursive;
-		font-size: 3em;
-		padding-bottom: 1em;
-		text-align: center;
-		font-weight: normal;
-	}
 
 	.img-box {
 		width: 20em;
@@ -532,6 +527,20 @@ footer {
 
 		img {
 			width: 100%;
+		}
+	}
+
+	#people {
+		text-align: justify;
+
+		span {
+			padding: .5em;
+			margin: 2em 0 !important;
+			background-color: darken(#8AB5B3, 15%);
+			color: white;
+			@include border-radius(3px);
+			line-height: 2.5em;
+			white-space: nowrap;
 		}
 	}
 }
