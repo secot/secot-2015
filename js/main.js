@@ -42,7 +42,7 @@ window.onload = function(){
 
 function showVideo()
 {
-	document.getElementById('coverimageforplayer').innerHTML = '<iframe width="640" height="390" src="https://www.youtube.com/embed/TC9UAaxfITs?autoplay=1&rel=0&autohide=1&showinfo=0&origin=www.secot.com.br" frameborder="0" allowfullscreen></iframe>';
+	document.getElementById('coverimageforplayer').innerHTML = '<iframe width="640" height="'+document.getElementById('coverimageforplayer').offsetHeight+'" src="https://www.youtube.com/embed/TC9UAaxfITs?autoplay=1&rel=0&autohide=1&showinfo=0&origin=www.secot.com.br" frameborder="0" allowfullscreen></iframe>';
 	document.getElementById('video-preview').removeEventListener("click", showVideo);
 }
 
