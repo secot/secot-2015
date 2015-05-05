@@ -98,8 +98,8 @@
 			<p>Criada em 2009, a SeCoT é um evento organizado e promovido anualmente pelos alunos do curso com o apoio de docentes da área e considerada um dos maiores eventos acadêmicos sobre tecnologia da região.</p>
 			<p>A SeCoT é um evento que conta com diversas palestras com o objetivo de apresentar e debater temas relacionados à Computação, bem como suas aplicações em diversas áreas com ênfase em novas tecnologias e tendências do mercado.</p>
 			<p>Sempre tentando trazer o melhor na área de tecnologia e suas diversas áreas, a Semana é aberta para toda a comunidade de Sorocaba, contribuindo para consolidar a cidade como uma região atrativa para captação de programadores e instalação de empresas de tecnologia.</p>
-			<div class="center-wrap">
-				<a class="btn btn-lg disabled">Inscrições em breve</a>
+			<div class="center-wrap" id="btn-signup">
+				<a class="btn btn-lg" href="./inscricao.html">Inscreva-se Aqui</a>
 			</div>
 
 		</div>
@@ -107,11 +107,16 @@
 	</header>
 
 	<section id="facts" class="clean">
-		<img src="./img/art/main-logo.png" alt="logo">
-		<h2>Fatos Interessantes</h2>
-		<h4>na última edição ...</h4>
+		<img src="./img/art/main-logo.png" id="img-logo" alt="logo">
+		<h2>Um pouco sobre o evento</h2>
+		<h4>cortesia do canal Bit of Bits</h4>
+		
 		<div class="wrap">
-			<div class="fact-container">
+			<div id="coverimageforplayer">
+   			<img id="video-preview" src="./img/art/video-preview.png" style="cursor:pointer" />
+			</div>
+
+<!-- 			<div class="fact-container">
 				<div class="icon-wrap">
 					<i class="fa fa-child"></i>
 				</div>
@@ -131,7 +136,7 @@
 				</div>
 				<p>nenhum participante dormiu durante as apresentações</p>
 				<small>Ou pelo menos ninguém viu</small>
-			</div>
+			</div> -->
 		</div>
 	</section>
 
@@ -184,15 +189,6 @@
 				</div>
 			</div>
 
-			<div class="guest">
-				<div class="img-block">
-					<img src="./img/guests/leao.jpg" alt="">
-				</div>
-				<div class="description">
-					<h3>Luís Leão</h3>
-					<p class="mini-cv">Engenheiro de inovação, atualmente trabalhando como freelancer para desenvolver ideias factíveis com tecnologia. Contribuidor de projetos de open data, como a comunidade Transparência Hacker, também é membro do Garoa Hacker Clube, atua no Google Developer Group São Paulo (GDG-SP) e é editor da Revista iMasters. Desenvolvedor desde 2000, criou o sms2blog, o primeiro gateway de SMS para Twitter no Brasil, e atuou em agências digitais com marcas como Google, Coca-Cola, Nestlé, Itaucard, Fiat, GE, Globo Minas, Iveco, Usiminas, Vivo and Yamaha. Entre suas especialidades, estão APIs, JavaScript, HTML, sistemas embarcados, Arduino, Python, .NET.</p>
-				</div>
-			</div>
 
 			<div class="guest">
 				<div class="img-block">
@@ -226,6 +222,26 @@
 
 			<div class="guest">
 				<div class="img-block">
+					<img src="./img/guests/valter.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Valter Henrique</h3>
+					<p class="mini-cv">I have a passion and confidence to deliver software products, large and small, that directly impacts consumers. Some of my qualities are :articulate communicator, friendly, professional, engaging personal style and above all I have a strong desire to crank out robust and reliable solutions. I enjoy be creative, diplomatic innovator who can balance multiple business demands while maintaining a positive, collaborative, solution-oriented attitude.</p>
+				</div>
+			</div>
+
+			<div class="guest">
+				<div class="img-block">
+					<img src="./img/guests/vanessa.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Vanessa Me Tonini</h3>
+					<p class="mini-cv">I'm a Web developer, specialist in frontend code with seven years of professional experience where I could work in great companies and amazing projects. In the last 4 years, I attended more than 20 events about technology in Brazil, and as speaker in some of them. Worked for W3C Brazil Office (hosted by NIC.br) supporting Web accessibility and Open Web initiatives. Also I'm a researcher and enthusiast about Web acessibility and open source e-commerce (Magento).</p>
+				</div>
+			</div>
+
+			<div class="guest">
+				<div class="img-block">
 					<img src="./img/guests/vitor.jpg" alt="">
 				</div>
 				<div class="description">
@@ -237,11 +253,10 @@
 			<div class="guest c4p-wrap">
 				<h3>Quer Apresentar?</h3>
 				<a href="http://call4paperz.com/events/secot-2015" target="_blank" class="btn btn-lg">Envie um call4paperz</a>
-				<p>Selecionaremos os mais votados de acordo com a disponibilidade no evento.</p>
+				<p>Selecionaremos os mais votados de acordo com a disponibilidade no evento. Prazo máximo: 09/05.</p>
 			</div>
 
 		</div>
-			<h4>* A lista completa de palestrantes e agenda serão divulgados em breve.</h4>
 	</section>
 
 	<section id="map-section" class="clean">
@@ -467,8 +482,93 @@
 					<a href="http://novatec.com.br/" target="_blank"><img src="./img/companies/novatec.jpg" alt=""></a>
 				</div>
 			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<a href="https://www.youtube.com/channel/UCzOe8P06UdNCX0CHgRSkJRg" target="_blank"><img src="./img/companies/bitofbits.jpg" alt=""></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>Alexandre Alvaro</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>André Bonfatti</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>André Mota</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>André Mitsuoka</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Breno Lima de Freitas</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Daniel Miola</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>Gabriel Cruz Ferreira</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Henrique Teruo Eihara</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>José De Oliveira Guimarães</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>Katharina Garcia</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Lucas Renan</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Lucio Mitsuru Seki</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>Luiz Santelli</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Marco Beraldi</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Pedro Reis Pires</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>Renato Molina</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Rodrigo Mello Arraes</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Tiago A. Almeida</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-img-box">
+					<p><strong>Tiemi Sakata</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Yeda Venturini</strong></p>
+				</div>
+				<div class="column-img-box">
+					<p><strong>Farmácia Farma Popular (SP)</strong></p>
+				</div>
+			</div>
+
+
 		</div>
-    <a href="https://www.catarse.me/pt/secot" target="_blank" class="btn btn-lg">Apoie você também</a>
+    <!-- <a href="https://www.catarse.me/pt/secot" target="_blank" class="btn btn-lg">Apoie você também</a> -->
 	</section>
 	
 	<section class="clean" id="footer">
