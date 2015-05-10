@@ -29,3 +29,17 @@
 		width: 100%;
 	}
 }
+
+.c4p-guests {
+	display: block;
+	width: 90%;
+	margin: 4em auto auto auto;
+}
+
+.c4p-guests h5 {
+	font-size: 1.6em;
+}
+.guest h6 {
+	font-size: 1.2em;
+	margin-bottom: .3em;
+}
