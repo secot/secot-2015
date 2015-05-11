@@ -2,6 +2,7 @@ var map;
 google.maps.event.addDomListener(window, 'load', initialize);
 
 window.onload = function(){
+/*
 	var e = function(){
 		var o = new Date("5/11/2015"),
 				t = new Date,
@@ -16,7 +17,7 @@ window.onload = function(){
 
 		for(var r in a)document.getElementById(r).innerHTML = a[r];setTimeout(e,1e3)
 	};e()
-
+*/
 	var g = function(){
 		var l = document.getElementsByClassName("mini-cv");
 
