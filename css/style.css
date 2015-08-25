@@ -43,3 +43,48 @@
 	font-size: 1.2em;
 	margin-bottom: .3em;
 }
+
+h1 {
+	text-align: center;
+	color: #666;
+}
+
+section.rubyconf {
+	padding: 3em;
+	height: 400px;
+	background-color: #911D1A;
+	color: #fafafa;
+}
+
+.rc-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+	width: 60%;
+	float: left;
+}
+
+.rc-text p.title {
+		font-size: 1.4em;
+		margin-bottom: .5em;
+}
+
+.rc-text p.description {
+		font-size: 1.1em;
+		line-height: 1.4em;
+		margin-bottom: .4em;
+}
+
+.rc-text a:link,.rc-text a:visited,.rc-text a:active,.rc-text a {
+	color: #F3C07B;
+}
+
+.rc-img {
+	width: 40%;
+	float: right;
+	text-align: right;
+}
+
+.rc-img img {
+	height: 100%;
+}
